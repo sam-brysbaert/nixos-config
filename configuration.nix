@@ -101,11 +101,14 @@ in
     windowManager.bspwm.enable = true;
     windowManager.default = "bspwm";
 
-    # enable auto-login for lightDM
-    displayManager.lightdm.autoLogin.enable = true;
-    displayManager.lightdm.autoLogin.user = chosenUsername;
+    displayManager.sddm = {
+      enable = true;
+      autoLogin.enable = true;
+      autoLogin.user = chosenUsername;
+      autoNumlock = true;
+    };
 
-    # stop lightdm from choosing xterm session automatically instead of my chosen window manager
+    # stop display manager from choosing xterm session automatically instead of my chosen window manager
     desktopManager.xterm.enable = false;
     desktopManager.default = "none";
 
