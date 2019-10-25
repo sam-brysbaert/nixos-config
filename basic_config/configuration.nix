@@ -56,6 +56,9 @@ in
 
   # enable ssh
   services.sshd.enable = true;
+
+  # enable network manager
+  networking.networkmanager.enable = true;
   
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
