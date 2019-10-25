@@ -22,16 +22,11 @@ in
     gnupg
     git
     vim
-    firefox
-    
   ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # enable networkmanager
-  networking.networkmanager.enable = true;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -58,17 +53,10 @@ in
   users.extraUsers.${chosenUsername} = {
     shell = "/run/current-system/sw/bin/fish";
   };
+
+  # enable ssh
+  services.sshd.enable = true;
   
-    # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable touchpad support.
-  services.xserver.libinput.enable = true;
-
-  # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
