@@ -77,12 +77,6 @@ in
   # auto upgrade nixOS to the latest version
   system.autoUpgrade.enable = true;
 
-  # activate plex
-  services.plex = {
-    enable = true;
-    openFirewall = true;
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

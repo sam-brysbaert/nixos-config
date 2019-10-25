@@ -18,4 +18,10 @@
   # enable wake-on-lan
   services.wakeonlan.interfaces = [{ interface = "enp5s0"; method = "magicpacket"; } ];
 
+  # activate plex
+  services.plex = {
+    enable = true;
+    openFirewall = true;
+  };
+
 }
