@@ -54,6 +54,7 @@ in
     noto-fonts-emoji
     dejavu_fonts
     roboto-mono
+    font-awesome
   ];
 
   # Use the systemd-boot EFI boot loader.
