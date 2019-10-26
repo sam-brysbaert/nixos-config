@@ -14,7 +14,7 @@
     '';
 
     # enable auto log-in
-    displayManager.sddm.autologin.enable = true;
+    displayManager.sddm.autoLogin.enable = true;
 
   };
 
