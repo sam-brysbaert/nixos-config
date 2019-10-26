@@ -74,9 +74,6 @@ in
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 
-  # auto upgrade nixOS to the latest version
-  system.autoUpgrade.enable = true;
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
