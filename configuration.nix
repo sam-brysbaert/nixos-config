@@ -98,12 +98,12 @@ in
 
     displayManager.sddm = {
       enable = true;
-      autoLogin.enable = true;
       autoLogin.user = chosenUsername;
       autoNumlock = true;
     };
 
-    # stop display manager from choosing xterm session automatically instead of my chosen window manager
+    # stop display manager from choosing xterm session automatically
+    # instead of my chosen window manager
     desktopManager.xterm.enable = false;
     desktopManager.default = "none";
 
