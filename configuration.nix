@@ -125,6 +125,9 @@ in
     shell = "/run/current-system/sw/bin/fish";
   };
 
+  # set vim as default editor
+  environment.variables = { EDITOR = "vim"; VISUAL = "vim"; };
+
   # enable trim to aid SSD performance;
   services.fstrim.enable = true;
 
