@@ -46,6 +46,8 @@ in
     git
     tree
     killall
+    sxhkd
+    bspwm
   ];
 
   # fonts have to be listed separately
@@ -89,20 +91,7 @@ in
     # Enable the X11 windowing system.
     enable = true;
       
-    # set bspwm as window manager
-    windowManager.bspwm.enable = true;
-    windowManager.default = "bspwm";
-
-    displayManager.sddm = {
-      enable = true;
-      autoLogin.user = chosenUsername;
-      autoNumlock = true;
-    };
-
-    # stop display manager from choosing xterm session automatically
-    # instead of my chosen window manager
-    desktopManager.xterm.enable = false;
-    desktopManager.default = "none";
+    displayManager.startx.enable = true;
 
   };
 
