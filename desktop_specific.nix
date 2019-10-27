@@ -3,6 +3,10 @@
 {
   networking.hostName = "sam-nixos-desktop"; # Define your hostname.
 
+  environment.systemPackages = with pkgs; [
+    steam
+  ];
+
   services.xserver = {
     
     # enable nvidia drivers
@@ -26,5 +30,9 @@
     enable = true;
     openFirewall = true;
   };
+
+  # for 32-bit games on steam
+  hardware.opengl.driSupport32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
 
 }
