@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    steam
+  ];
+
   networking = {
     hostName = "sam-nixos-desktop";
     # configuration for static ip
@@ -8,10 +12,6 @@
     defaultGateway = "192.168.0.1";
     nameservers = [ "1.1.1.1" ];
   };
-
-  environment.systemPackages = with pkgs; [
-    steam
-  ];
 
   services.xserver = {
     
@@ -30,6 +30,10 @@
 
   # enable wake-on-lan
   services.wakeonlan.interfaces = [{ interface = "enp5s0"; method = "magicpacket"; } ];
+
+  # ssh 
+  services.sshd.enable = true;
+  services.openssh.forwardX11 = true;
 
   # activate plex
   services.plex = {
