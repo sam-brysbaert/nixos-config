@@ -1,7 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "sam-nixos-laptop"; # Define your hostname.
+
+  networking = {
+    hostName = "sam-nixos-laptop";
+    networkmanager.enable = true;
+    dhcpcd.enable = false;
+  };
 
   # enable tlp to help save battery life
   services.tlp.enable = true;

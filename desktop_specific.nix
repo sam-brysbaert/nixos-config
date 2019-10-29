@@ -1,7 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "sam-nixos-desktop"; # Define your hostname.
+  networking = {
+    hostName = "sam-nixos-desktop";
+    # configuration for static ip
+    interfaces.enp5s0.ipv4.addresses = [ { address = "192.168.0.15"; prefixLength = 24; }  ];
+    defaultGateway = "192.168.0.1";
+    nameservers = [ "1.1.1.1" ];
+  };
 
   environment.systemPackages = with pkgs; [
     steam

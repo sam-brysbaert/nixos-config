@@ -63,12 +63,6 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # network settings
-  networking = {
-    networkmanager.enable = true;
-    dhcpcd.enable = false;
-  };
-
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 
