@@ -48,6 +48,8 @@ in
     killall
     sxhkd
     bspwm
+    qbittorrent
+    ffmpeg
   ];
 
   # fonts have to be listed separately
