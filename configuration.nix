@@ -50,6 +50,8 @@ in
     bspwm
     qbittorrent
     ffmpeg
+    subdl
+    tmux
   ];
 
   # fonts have to be listed separately
