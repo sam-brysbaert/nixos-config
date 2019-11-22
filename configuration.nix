@@ -49,9 +49,11 @@ in
     sxhkd
     bspwm
     qbittorrent
-    ffmpeg
+    ffmpeg-full
     subdl
     tmux
+    mediainfo
+    cv
   ];
 
   # fonts have to be listed separately
