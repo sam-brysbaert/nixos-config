@@ -54,4 +54,11 @@
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
 
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "*/15 * * * * sam /run/current-system/sw/bin/flock -n /tmp/ffmpegcronjob.lockfile /home/sam/ffmpegAutoConvert/ffmpegAutoConvert.sh /hdd/films /hdd/filmsConverted 2> /home/sam/ffmpegAutoConvert/log"
+    ];
+  };
+
 }
