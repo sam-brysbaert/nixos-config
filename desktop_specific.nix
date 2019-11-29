@@ -44,12 +44,6 @@
   services.sshd.enable = true;
   services.openssh.forwardX11 = true;
 
-  # activate plex
-  services.plex = {
-    enable = true;
-    openFirewall = true;
-  };
-
   # for 32-bit games on steam
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
