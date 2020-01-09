@@ -11,7 +11,10 @@
   # enable tlp to help save battery life
   services.tlp.enable = true;
 
-  # enable touchpad support
-  services.xserver.libinput.enable = true;
+  # touchpad
+  services.xserver.libinput = {
+    enable = true;
+    naturalScrolling = true;
+  };
   
 }
