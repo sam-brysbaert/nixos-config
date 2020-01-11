@@ -54,6 +54,7 @@ in
     tmux
     mediainfo
     cv
+    dtrx
   ];
 
   # fonts have to be listed separately
