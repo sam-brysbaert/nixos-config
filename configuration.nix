@@ -54,6 +54,10 @@ in
     tmux
     mediainfo
     cv
+    dtrx
+    xidlehook
+    i3lock
+    pavucontrol
   ];
 
   # fonts have to be listed separately
